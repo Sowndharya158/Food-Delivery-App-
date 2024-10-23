@@ -1,6 +1,4 @@
 import { useContext } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import OrderContext from '../store/OrderContext';
 import Header from './Header';
