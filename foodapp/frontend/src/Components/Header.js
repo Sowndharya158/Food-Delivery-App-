@@ -16,18 +16,18 @@ export default function Header({content,handleHome}){
             <h1 style={{marginTop:"2rem"}}>{content}</h1></span>
              <><div style={{display:"flex",gap:"1rem"}}>
             <div className="header-largerscreen" >
-            <h2 onClick={handleHome} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}}>Home <i onClick={handleHome} className="fa-solid fa-house" style={{color:"#A06C23",cursor:"pointer"}}/></h2>
-            <h2 onClick={handleCart} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}}>Cart <i onClick={handleCart} className="fa fa-shopping-bag" style={{color:"#A06C23",cursor:"pointer"}}/></h2><h2 style={{color:"#A06C23",marginRight:"1rem",marginTop:"1em",cursor:"pointer",}} onClick={handleOrderDetails}>Orders <i className="fa-solid fa-truck" style={{color:"#A06C23",cursor:"pointer"}} onClick={handleOrderDetails}/></h2></div>
-            <div className='header-smallscreen'>{!navClicked? <h2  style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}} onClick={()=>setNavClicked(true)}><FontAwesomeIcon icon={faBars}/></h2 >:<h2 style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}} onClick={()=>setNavClicked(false)}><FontAwesomeIcon icon={faXmark} /></h2>}</div>
+            <h1 onClick={handleHome} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}}>Home <i onClick={handleHome} className="fa-solid fa-house" style={{color:"#A06C23",cursor:"pointer"}}/></h1>
+            <h1 onClick={handleCart} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}}>Cart <i onClick={handleCart} className="fa fa-shopping-bag" style={{color:"#A06C23",cursor:"pointer"}}/></h1><h1 style={{color:"#A06C23",marginRight:"1rem",marginTop:"1em",cursor:"pointer",}} onClick={handleOrderDetails}>Orders <i className="fa-solid fa-truck" style={{color:"#A06C23",cursor:"pointer"}} onClick={handleOrderDetails}/></h1></div>
+            <div className='header-smallscreen'>{!navClicked? <h1  style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}} onClick={()=>setNavClicked(true)}><FontAwesomeIcon icon={faBars}/></h1 >:<h1 style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em"}} onClick={()=>setNavClicked(false)}><FontAwesomeIcon icon={faXmark} /></h1>}</div>
             </div>
       
                 </>  
         </div>
         {navClicked && <div style={{display:"flex",flexDirection:"column",gap:"1rem",marginBottom:"0.3rem",textAlign:"center"}}>
-             <h2 onClick={handleHome} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em",textDecoration:"underline"}}>Home <i onClick={handleHome} className="fa-solid fa-house" style={{color:"#A06C23",cursor:"pointer"}}/></h2>
-                <h2 onClick={handleCart} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em",textDecoration:"underline"}}>Cart <i onClick={handleCart} className="fa fa-shopping-bag" style={{color:"#A06C23",cursor:"pointer"}}/></h2>
+             <h1 onClick={handleHome} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em",textDecoration:"underline"}}>Home <i onClick={handleHome} className="fa-solid fa-house" style={{color:"#A06C23",cursor:"pointer"}}/></h1>
+                <h1 onClick={handleCart} style={{cursor:"pointer",color:"#A06C23",marginRight:"1rem",marginTop:"1em",textDecoration:"underline"}}>Cart <i onClick={handleCart} className="fa fa-shopping-bag" style={{color:"#A06C23",cursor:"pointer"}}/></h1>
                 
-                <h2 style={{color:"#A06C23",marginRight:"1rem",marginTop:"1em",cursor:"pointer",marginBottom:"1rem",textDecoration:"underline"}} onClick={handleOrderDetails}>Orders <i className="fa-solid fa-truck" style={{color:"#A06C23",cursor:"pointer"}} onClick={handleOrderDetails}/></h2>
+                <h1 style={{color:"#A06C23",marginRight:"1rem",marginTop:"1em",cursor:"pointer",marginBottom:"1rem",textDecoration:"underline"}} onClick={handleOrderDetails}>Orders <i className="fa-solid fa-truck" style={{color:"#A06C23",cursor:"pointer"}} onClick={handleOrderDetails}/></h1>
                 </div>}</header>
     )
 }

@@ -12,19 +12,17 @@ export default function OrderSuccess() {
 
     const cartCtx=useContext(CartContext);
     const orderCtx=useContext(OrderContext);
-    const setCartItems=cartCtx.EmptyCart
+    
     const cartitems=cartCtx.items
-const navigate=useNavigate()
-    console.log("Cart context holds - ",cartCtx.items)
-    function handleHomeNavigationAfterOrder(){
-        setCartItems()
-navigate("/")
-    }
+    const recentOrder=orderCtx.orderDetails?orderCtx.orderDetails[orderCtx.orderDetails.length - 1].cartItems:[]
+
+    console.log("recentOrder--",recentOrder)
+    
    
 
     console.log("Cart Items:", cartitems); 
 
-    const Cart_total=cartCtx.items.reduce((total,item)=>total+(item.price*item.quantity),0)
+    const Cart_total=recentOrder.reduce((total,item)=>total+(item.price*item.quantity),0)
 
     const platformfee=1;
     const deliveryfee=4;
@@ -33,12 +31,12 @@ navigate("/")
     return (
         <>
             <Header content="Order Details"  />
-            {cartitems.length<1?<EmptyCart/>:
+            {recentOrder.length<1?<EmptyCart/>:
             <><div className='checkout-container'><div style={{display:"flex",margin:"1rem auto",width:"100%",alignItems:"center",justifyContent:"center",gap:"10px"}}><FontAwesomeIcon icon={faSquareCheck} size='2xl' style={{color:"#4BB543"}}/><h2 style={{textAlign:"center"}}>Your order has been placed successfully</h2></div>
             <div className="container">
-                <h2 style={{ color: "#A06C23", textAlign: "center" }}>Cart ({cartitems.length} Items)</h2>
+                <h2 style={{ color: "#A06C23", textAlign: "center" }}>Cart ({recentOrder.length} Items)</h2>
                 <div className="orderdetails">
-                    {cartitems.length > 0 && cartitems.map((item) => (<>
+                    {recentOrder.length > 0 && recentOrder.map((item) => (<>
                         <div className="cart-item" key={item.name}>
                             <div className='image'><img src={item.image} alt={item.name} /></div>
                             <div className='cart-info'>

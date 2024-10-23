@@ -12,7 +12,7 @@ export default function Checkout() {
 
     const cartctx=useContext(CartContext);
     const orderCtx=useContext(OrderContext);
-
+    const setCartItems=cartctx.EmptyCart;
     const [isError,setError]=useState("")
     const cartItems=cartctx.items;
     
@@ -32,7 +32,6 @@ const [deliveryInfo,setDeliveryInfo]=useState({
 
 
 })
-    const amount = '155'; // Total amount for the order
 
     const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
 const navigate=useNavigate()
@@ -41,6 +40,8 @@ const navigate=useNavigate()
         {
             setError("")
             setIsPaymentSuccess(true);
+            
+           
         }
             else{
 setError("Please fill all the details to proceed");
@@ -74,7 +75,9 @@ window.scrollTo(0,0)
               
               alert(`Transaction completed by ${name}`);
               orderCtx.addOrder({cartItems:cartItems,deliverydetails:deliveryInfo});
+              setCartItems([])
               console.log(orderCtx.orderDetails)
+              
               navigate("/ordersuccessful")
               
             }).catch((error)=>{
@@ -83,11 +86,14 @@ window.scrollTo(0,0)
             })
           }
 
+         
+
           function handleCOD(){
             if(deliveryInfo.name && deliveryInfo.phone && deliveryInfo.aptsuite && deliveryInfo.city && deliveryInfo.email && deliveryInfo.pincode && deliveryInfo.state&& deliveryInfo.streetaddress)
                 {
                     setError("")
                     orderCtx.addOrder({cartItems:cartItems,deliverydetails:deliveryInfo});
+                    setCartItems([])
                     console.log(orderCtx.orderDetails)
                     navigate("/ordersuccessful")
                 }
