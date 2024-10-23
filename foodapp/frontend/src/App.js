@@ -40,8 +40,6 @@ function App() {
     setReRenderKey((key)=>key+1)
     navigate("/")
 }
-  
-const amount='1'
 
   return (
   <>

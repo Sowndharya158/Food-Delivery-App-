@@ -1,5 +1,4 @@
 import Header from "./Header";
-import { FaTrash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import CartContext from '../store/CartContext';
 import { useContext } from 'react';

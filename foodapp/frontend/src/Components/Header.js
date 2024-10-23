@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faWindowClose, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars,  faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 export default function Header({content,handleHome}){
     const [navClicked,setNavClicked]=useState(false)
