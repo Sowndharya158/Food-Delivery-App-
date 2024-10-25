@@ -45,7 +45,7 @@ export default function Cart() {
            
             {cartitems.length<1?<><EmptyCart/></>:
              <><Header content="Cart Details" handleHome={handleHome} /><div className="container">
-                <h2 style={{ color: "#A06C23", textAlign: "center" }}>Cart ({cartitems.length} Items)</h2>
+                <h2 style={{ color: "#A06C23", textAlign: "center" }}>Cart ({cartitems.length} {cartitems.length>1?"Items":"Item"})</h2>
                 <div className="orderdetails">
                     {cartitems.length > 0 && cartitems.map((item) => (<>
                         <div className="cart-item" key={item.name}>
@@ -73,7 +73,7 @@ export default function Cart() {
 
                 <div className='pricesection'>
                     <div className='heading'>
-                        <h3 style={{ textAlign: "center" }}>Price Details (1 item)</h3>
+                        <h3 style={{ textAlign: "center" }}>Price Details ({cartitems.length} {cartitems.length>1?"Items":"Item"})</h3>
                     </div>
                     <div className='pricedetails'>
                         <div className='itemtotal'>

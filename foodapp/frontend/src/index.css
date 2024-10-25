@@ -74,7 +74,7 @@ code {
   margin:0;
 }
 
-.qty h4,h3{
+.qty h4,.qty h3{
   margin: 1rem 0;
   padding: 0.4rem;
   
@@ -313,7 +313,7 @@ Copy code
   }
   
   .pricesection{
-    max-width:176px;
+    max-width:246px;
   }
   
 }
@@ -329,7 +329,7 @@ Copy code
   }
 
   .pricesection{
-    max-width: 340px;
+    max-width: 480px;
   }
 }
 
@@ -343,7 +343,7 @@ Copy code
   }
   
   .pricesection{
-    max-width: 520px;
+    max-width: 600px;
   }
 }
 
@@ -357,7 +357,7 @@ Copy code
   }
  
   .pricesection{
-    max-width: 760px;
+    max-width: 790px;
   }
   .checkout .pricesection,.checkout .container{
     max-width:520px
@@ -490,7 +490,11 @@ margin:2rem 0 2rem 10rem ;
 .header-smallscreen{
   display:none;
 }
-
+@media(min-width:875px){
+  .smallerscreenpagination{
+    display:none;
+  }
+}
 @media(max-width:874px){
   .header-largerscreen{
     display:none;
@@ -499,7 +503,7 @@ margin:2rem 0 2rem 10rem ;
     display:block;
 
   }
-  h4,h5,p,h6{
+  h3,h4,h5,p,h6,td,th{
     font-size:small;
   }
   h1,h2{
@@ -509,6 +513,11 @@ margin:2rem 0 2rem 10rem ;
     flex-direction:column;
 
   }
+  .logo{
+    width:3em;
+    height:3em;
+    margin-top:1rem;
+  }
   .cart-info{
     gap:0;
   }
@@ -516,16 +525,19 @@ margin:2rem 0 2rem 10rem ;
   .iteminfo h3{
     margin:0;
   }
-
-  .pricesection .pricedetails{
-
-  }
   .cartmanipulation button,.cartmanipulation input,.deleteicon svg{
    width:1.5em;
    height:1.5em;
   }
   .itemmodification{
 justify-content:flex-start;
+gap:2rem;
   }
-  
+  .pagination-button1{
+    display:none;
+  }
+  .pagination-section{
+    margin: auto;
+    text-align:center;
+  }
 }
